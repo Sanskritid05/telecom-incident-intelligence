@@ -9,23 +9,23 @@ import joblib
 
 import os
 
-import google.generativeai as genai
+# import google.generativeai as genai
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
-GEMINI_API_KEY = os.getenv(
-    'GEMINI_API_KEY'
-)
+# GEMINI_API_KEY = os.getenv(
+#     'GEMINI_API_KEY'
+# )
 
-genai.configure(
-    api_key=GEMINI_API_KEY
-)
+# genai.configure(
+#     api_key=GEMINI_API_KEY
+# )
 
-gemini_model = genai.GenerativeModel(
-    'gemini-pro'
-)
+# gemini_model = genai.GenerativeModel(
+#     'gemini-pro'
+# )
 
 # ==========================================
 # LOAD MODEL

@@ -5,6 +5,8 @@ import Header from '../components/Header'
 
 import { useNavigate } from 'react-router-dom'
 
+import { Helmet } from 'react-helmet-async'
+
 import {
   LineChart,
   Line,
@@ -164,7 +166,7 @@ useEffect(() => {
 
       {/* MAIN CONTENT */}
 
-      <main className="pt-[90px] px-8 pb-8">
+      <main className="pt-[90px] px-4 md:px-8 lg:mr-[320px] pb-8">
 
         {/* TITLE */}
 
@@ -638,7 +640,7 @@ useEffect(() => {
 
       {/* KPI PANEL */}
 
-  <aside className="fixed right-0 top-0 w-[320px] h-screen bg-[#081726]/95 border-l border-cyan-400/20 p-6 overflow-y-auto z-50">
+  <aside className="hidden lg:block fixed right-0 top-0 w-[320px] h-screen bg-[#081726]/95 border-l border-cyan-400/20 p-6 overflow-y-auto z-50">
 
   <h2 className="text-cyan-300 text-xl font-bold uppercase text-center mb-10 leading-10">
 
@@ -766,5 +768,13 @@ useEffect(() => {
   
 }
 
+<Helmet>
+  <title>AI Telecom Incident Intelligence Platform</title>
+
+  <meta
+    name="description"
+    content="AI-powered telecom analytics platform for operational intelligence, KPI monitoring, network analytics, and predictive incident risk analysis."
+  />
+</Helmet>
 
 export default Dashboard

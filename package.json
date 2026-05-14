@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "plotly.js": "^3.5.1",
+    "react-helmet-async": "^3.0.0",
     "react-plotly.js": "^2.6.0"
   }
 }

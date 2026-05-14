@@ -1,5 +1,16 @@
 const BASE_URL = 'https://telecom-ai-backend-pm1k.onrender.com'
 
+export const warmupBackend = async () => {
+
+  try {
+
+    await fetch(BASE_URL)
+
+  } catch (error) {
+
+    console.log(error)
+  }
+}
 
 // ==========================================
 // GENERIC FETCH HELPER

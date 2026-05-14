@@ -5,7 +5,6 @@ import Header from '../components/Header'
 
 import { useNavigate } from 'react-router-dom'
 
-
 import {
   LineChart,
   Line,
@@ -29,7 +28,9 @@ import {
   fetchRegionAnalysis,
   fetchNetworkPerformance,
   fetchRiskDistribution,
-  generateInsight
+  generateInsight,
+  warmupBackend
+
 } from '../services/api'
 
 function Dashboard() {
@@ -78,6 +79,8 @@ useEffect(() => {
   const fetchAIData = async () => {
 
     try {
+
+      await warmupBackend()
 
       const predictionData =
         await predictReopenRisk()
@@ -136,6 +139,17 @@ useEffect(() => {
 
 }, [])
 
+  if (loading) {
+
+  return (
+
+    <div className="h-screen bg-[#061223] flex items-center justify-center text-cyan-300 text-2xl font-bold">
+
+      Initializing Telecom Intelligence System...
+
+    </div>
+  )
+  }
   return (
 
     <div className="bg-[#061223] min-h-screen text-white overflow-x-hidden">

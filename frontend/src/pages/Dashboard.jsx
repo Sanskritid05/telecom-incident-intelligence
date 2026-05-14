@@ -154,6 +154,27 @@ useEffect(() => {
   }
   return (
 
+  <>
+
+    <Helmet>
+
+      <title>
+        AI Telecom Incident Intelligence Platform
+      </title>
+
+      <meta
+        name="description"
+        content="
+          AI-powered telecom analytics platform
+          for operational intelligence,
+          KPI monitoring,
+          network analytics,
+          and predictive incident risk analysis.
+        "
+      />
+
+    </Helmet>
+
     <div className="bg-[#061223] min-h-screen text-white overflow-x-hidden">
 
       {/* SIDEBAR */}
@@ -194,9 +215,22 @@ useEffect(() => {
 
           <div
             onClick={() => navigate('/monthly-trends')}
-            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full
-            hover:scale-[1.03] hover:shadow-cyan-500/20 hover:shadow-2xl
-            hover:border-cyan-300 transition-all duration-300 cursor-pointer"
+            className="
+              bg-[#0B1B2B]/95
+              border
+              border-cyan-400/20
+              rounded-[30px]
+              p-8
+              h-[420px]
+              w-full
+              hover:scale-[1.03]
+              hover:shadow-cyan-500/20
+              hover:shadow-2xl
+              hover:border-cyan-300
+              transition-all
+              duration-300
+              cursor-pointer
+            "
           >
 
             <h2 className="text-xl font-bold text-cyan-300 uppercase mb-8 tracking-wide">
@@ -242,21 +276,28 @@ useEffect(() => {
 
             </ResponsiveContainer>
 
-            <p className="text-gray-400 mt-6 text-sm">
-
-              {/* {insight} */}
-
-            </p>
-
           </div>
 
           {/* REGION ANALYSIS */}
 
           <div
             onClick={() => navigate('/region-analysis')}
-            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full
-            hover:scale-[1.03] hover:shadow-cyan-500/20 hover:shadow-2xl
-            hover:border-cyan-300 transition-all duration-300 cursor-pointer"
+            className="
+              bg-[#0B1B2B]/95
+              border
+              border-cyan-400/20
+              rounded-[30px]
+              p-8
+              h-[420px]
+              w-full
+              hover:scale-[1.03]
+              hover:shadow-cyan-500/20
+              hover:shadow-2xl
+              hover:border-cyan-300
+              transition-all
+              duration-300
+              cursor-pointer
+            "
           >
 
             <h2 className="text-xl font-bold text-cyan-300 uppercase mb-8 tracking-wide">
@@ -273,78 +314,8 @@ useEffect(() => {
                   data={regionData || []}
                   dataKey="value"
                   outerRadius={78}
-                  labelLine={false}
                   innerRadius={45}
                   paddingAngle={3}
-                  label={({ 
-                    cx,
-                    cy,
-                    midAngle,
-                    outerRadius,
-                    percent,
-                    name,
-                    fill
-                  }) => {
-
-                    const RADIAN = Math.PI / 180
-
-                    // line start
-                    const sx =
-                      cx + outerRadius * Math.cos(-midAngle * RADIAN)
-
-                    const sy =
-                      cy + outerRadius * Math.sin(-midAngle * RADIAN)
-
-                    // line middle
-                    const mx =
-                      cx + (outerRadius + 20) * Math.cos(-midAngle * RADIAN)
-
-                    const my =
-                      cy + (outerRadius + 20) * Math.sin(-midAngle * RADIAN)
-
-                    // label position
-                    const ex =
-                      cx + (outerRadius + 28) * Math.cos(-midAngle * RADIAN)
-
-                    const ey =
-                      cy + (outerRadius + 28
-
-                      ) * Math.sin(-midAngle * RADIAN)
-
-                    const textAnchor =
-                      ex > cx ? 'start' : 'end'
-
-                    return (
-
-                      <g>
-
-                        {/* CONNECTOR LINE */}
-
-                        <path
-                          d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`}
-                          stroke={fill}
-                          fill="none"
-                          strokeWidth={2}
-                        />
-
-                        {/* LABEL TEXT */}
-
-                        <text
-                          x={ex}
-                          y={ey}
-                          fill={fill}
-                          textAnchor={textAnchor}
-                          dominantBaseline="central"
-                          fontSize={12}
-                          fontWeight="500"
-                        >
-                          {`${name} ${(percent * 100).toFixed(0)}%`}
-                        </text>
-
-                      </g>
-                    )
-                  }}
-          
                 >
 
                   {
@@ -362,30 +333,9 @@ useEffect(() => {
 
                 </Pie>
 
-                <Tooltip
-                  formatter={(value, name) => {
+                <Tooltip />
 
-                    const total = (regionData || []).reduce(
-                      (sum, item) => sum + item.value,
-                      0
-                    )
-
-                    const percentage = (
-                      (value / total) * 100
-                    ).toFixed(1)
-
-                    return [
-                      `${value} (${percentage}%)`,
-                      name
-                    ]
-                  }}
-                />
-
-                <Legend
-                  wrapperStyle={{
-                    fontSize: '20px'
-                  }}
-                  ></Legend>
+                <Legend />
 
               </PieChart>
 
@@ -397,9 +347,22 @@ useEffect(() => {
 
           <div
             onClick={() => navigate('/network-performance')}
-            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full
-            hover:scale-[1.03] hover:shadow-cyan-500/20 hover:shadow-2xl
-            hover:border-cyan-300 transition-all duration-300 cursor-pointer"
+            className="
+              bg-[#0B1B2B]/95
+              border
+              border-cyan-400/20
+              rounded-[30px]
+              p-8
+              h-[420px]
+              w-full
+              hover:scale-[1.03]
+              hover:shadow-cyan-500/20
+              hover:shadow-2xl
+              hover:border-cyan-300
+              transition-all
+              duration-300
+              cursor-pointer
+            "
           >
 
             <h2 className="text-xl font-bold text-cyan-300 uppercase mb-8 tracking-wide">
@@ -420,12 +383,10 @@ useEffect(() => {
                 <XAxis
                   dataKey="name"
                   stroke="#94A3B8"
-                  tick={{ fill: '#94A3B8' }}
                 />
 
                 <YAxis
                   stroke="#94A3B8"
-                  tick={{ fill: '#94A3B8' }}
                 />
 
                 <Tooltip />
@@ -447,9 +408,22 @@ useEffect(() => {
 
           <div
             onClick={() => navigate('/reopen-risk')}
-            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full
-            hover:scale-[1.03] hover:shadow-cyan-500/20 hover:shadow-2xl
-            hover:border-cyan-300 transition-all duration-300 cursor-pointer"
+            className="
+              bg-[#0B1B2B]/95
+              border
+              border-cyan-400/20
+              rounded-[30px]
+              p-8
+              h-[420px]
+              w-full
+              hover:scale-[1.03]
+              hover:shadow-cyan-500/20
+              hover:shadow-2xl
+              hover:border-cyan-300
+              transition-all
+              duration-300
+              cursor-pointer
+            "
           >
 
             <h2 className="text-xl font-bold text-cyan-300 uppercase mb-8 tracking-wide">
@@ -470,12 +444,10 @@ useEffect(() => {
                 <XAxis
                   dataKey="name"
                   stroke="#94A3B8"
-                  tick={{ fill: '#94A3B8' }}
                 />
 
                 <YAxis
                   stroke="#94A3B8"
-                  tick={{ fill: '#94A3B8' }}
                 />
 
                 <Tooltip />
@@ -495,286 +467,78 @@ useEffect(() => {
 
         </div>
 
-        {/* DYNAMIC RISK TABLE */}
-
-        <div id="risk-table" className="mt-8 bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 hover:shadow-cyan-500/10 hover:shadow-2xl transition-all duration-300">
-
-          <h2 className="text-2xl font-bold text-cyan-300 uppercase mb-8 tracking-wide">
-
-            Risk Intelligence Table
-
-          </h2>
-
-          {
-
-            loading ? (
-
-              <p className="text-gray-400">
-
-                {/* {insight} */}
-
-
-              </p>
-
-            ) : (
-
-              <div className="overflow-x-auto">
-
-                <table className="w-full">
-
-                  <thead>
-
-                    <tr className="text-left border-b border-cyan-400/20 text-cyan-300 uppercase tracking-wide">
-
-                      <th className="py-5">Incident ID</th>
-                      <th>Risk Score</th>
-                      <th>Risk Level</th>
-                      <th>Region</th>
-                      <th>Priority</th>
-                      <th>Last Updated</th>
-
-                    </tr>
-
-                  </thead>
-
-                  <tbody>
-
-                    {[1, 2, 3, 4].map((item, index) => {
-
-                      const probability = Math.min(
-                        Math.max(
-                          (prediction?.reopen_probability || 0) + (Math.random() * 30 - 15),
-                          1
-                        ),
-                        99
-                      )
-
-                      return (
-
-                        <tr
-                          key={index}
-                          className="border-b border-cyan-400/10 hover:bg-cyan-500/5 transition-all"
-                        >
-
-                          <td className="py-5">
-
-                            IMC{Math.floor(Math.random() * 10000)}
-
-                          </td>
-
-                          <td>
-
-                            {probability.toFixed(2)}%
-
-                          </td>
-
-                          <td>
-
-                            <span
-                              className={`px-4 py-1 rounded-full text-sm
-
-                              ${
-                                probability > 70
-                                  ? 'bg-red-500/20 text-red-400'
-                                  : probability > 40
-                                  ? 'bg-yellow-500/20 text-yellow-400'
-                                  : 'bg-green-500/20 text-green-400'
-                              }
-                            `}
-                            >
-
-                              {
-
-                                probability > 70
-
-                                  ? 'HIGH'
-
-                                  : probability > 40
-
-                                  ? 'MED'
-
-                                  : 'LOW'
-                              }
-
-                            </span>
-
-                          </td>
-
-                          <td>
-
-                            {Math.floor(Math.random() * 4)}
-
-                          </td>
-
-                          <td>
-
-                            {Math.floor(Math.random() * 5) + 1}
-
-                          </td>
-
-                          <td>
-
-                            {new Date().toLocaleTimeString()}
-
-                          </td>
-
-                        </tr>
-                      )
-                    })}
-
-                  </tbody>
-
-                </table>
-
-              </div>
-
-            )
-
-          }
-
-        </div>
-
       </main>
 
       {/* KPI PANEL */}
 
-      {/* KPI PANEL */}
+      <aside className="
+        hidden
+        lg:block
+        fixed
+        right-0
+        top-0
+        w-[320px]
+        h-screen
+        bg-[#081726]/95
+        border-l
+        border-cyan-400/20
+        p-6
+        overflow-y-auto
+        z-50
+      ">
 
-  <aside className="hidden lg:block fixed right-0 top-0 w-[320px] h-screen bg-[#081726]/95 border-l border-cyan-400/20 p-6 overflow-y-auto z-50">
+        <h2 className="
+          text-cyan-300
+          text-xl
+          font-bold
+          uppercase
+          text-center
+          mb-10
+          leading-10
+        ">
 
-  <h2 className="text-cyan-300 text-xl font-bold uppercase text-center mb-10 leading-10">
+          Key Performance Indicators
 
-    Key Performance Indicators
+        </h2>
 
-  </h2>
+        <div className="space-y-3">
 
-  <div className="space-y-3">
+          <div className="
+            bg-[#0B1B2B]/95
+            border
+            border-cyan-400/20
+            rounded-[28px]
+            p-8
+            text-center
+          ">
 
-    {/* TOTAL INCIDENTS */}
+            <p className="text-gray-400 uppercase mb-4">
 
-    <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[28px] p-8 text-center hover:scale-[1.02] transition-all duration-300">
+              Total Incidents
 
-      <p className="text-gray-400 uppercase mb-4">
+            </p>
 
-        Total Incidents
+            <h1 className="text-3xl font-bold text-cyan-300">
 
-      </p>
+              {kpis?.total_incidents}
 
-      <h1 className="text-3xl font-bold text-cyan-300">
+            </h1>
 
-        {kpis?.total_incidents}
+          </div>
 
-      </h1>
+        </div>
 
-    </div>
-
-    {/* REOPENED INCIDENTS */}
-
-    <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[28px] p-8 text-center hover:scale-[1.02] transition-all duration-300">
-
-      <p className="text-gray-400 uppercase mb-4">
-
-        Reopened Incidents
-
-      </p>
-
-      <h1 className="text-3xl font-bold text-orange-400">
-
-        {kpis?.reopened_incidents}
-
-      </h1>
-
-    </div>
-
-    {/* HIGH RISK RATE */}
-
-    <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[28px] p-8 text-center hover:scale-[1.02] transition-all duration-300">
-
-      <p className="text-gray-400 uppercase mb-4">
-
-        High Risk Rate
-
-      </p>
-
-      <h1 className="text-3xl font-bold text-red-400">
-
-        {kpis?.high_risk_rate}%
-
-      </h1>
+      </aside>
 
     </div>
 
-    {/* LOW RISK RATE */}
+  </>
 
-    <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[28px] p-8 text-center hover:scale-[1.02] transition-all duration-300">
-
-      <p className="text-gray-400 uppercase mb-4">
-
-        Low Risk Rate
-
-      </p>
-
-      <h1 className="text-3xl font-bold text-green-400">
-
-        {kpis?.low_risk_rate}%
-
-      </h1>
-
-    </div>
-
-    {/* AVG RESOLUTION TIME */}
-
-    <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[28px] p-8 text-center hover:scale-[1.02] transition-all duration-300">
-
-      <p className="text-gray-400 uppercase mb-4">
-
-        Avg Resolution Time
-
-      </p>
-
-      <h1 className="text-3xl font-bold text-blue-400">
-
-        {kpis?.avg_resolution_time} hrs
-
-      </h1>
-
-    </div>
-
-    {/* NETWORK PERFORMANCE */}
-
-    <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[28px] p-8 text-center hover:scale-[1.02] transition-all duration-300">
-
-      <p className="text-gray-400 uppercase mb-4">
-
-        Network Performance%
-
-      </p>
-
-      <h1 className="text-3xl font-bold text-blue-400">
-
-        {kpis?.network_performance}%
-
-      </h1>
-
-    </div>
-
-  </div>
-
-  </aside>
-
-    </div>
-  )
+)
 
   
 }
 
-<Helmet>
-  <title>AI Telecom Incident Intelligence Platform</title>
 
-  <meta
-    name="description"
-    content="AI-powered telecom analytics platform for operational intelligence, KPI monitoring, network analytics, and predictive incident risk analysis."
-  />
-</Helmet>
 
 export default Dashboard

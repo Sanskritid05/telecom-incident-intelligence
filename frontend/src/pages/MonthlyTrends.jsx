@@ -179,7 +179,7 @@ function MonthlyTrends() {
 
         {/* RIGHT KPI PANEL */}
 
-            <aside className="hidden lg:block fixed right-0 top-0 w-[320px]w-[320px] h-screen bg-[#081726]/95 border-l border-cyan-400/20 p-6 overflow-y-auto z-50">
+            <aside className="hidden lg:block fixed right-0 top-0 w-[320px] h-screen bg-[#081726]/95 border-l border-cyan-400/20 p-6 overflow-y-auto z-50">
 
             <h2 className="text-cyan-300 text-xl font-bold uppercase text-center mb-10 leading-10">
 

@@ -151,7 +151,7 @@ function NetworkPerformance() {
 
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
 
           <div className="bg-[#0B1B2B] rounded-3xl p-6 border border-cyan-400/20">
 

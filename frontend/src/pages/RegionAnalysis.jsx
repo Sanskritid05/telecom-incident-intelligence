@@ -171,7 +171,7 @@ function RegionAnalysis() {
 
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
 
           {/* PIE */}
 

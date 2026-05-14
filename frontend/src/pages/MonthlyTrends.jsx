@@ -269,11 +269,11 @@ function MonthlyTrends() {
 
         {/* ANALYTICS GRID */}
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
 
           {/* MONTHLY INCIDENT COUNT */}
 
-          <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full overflow-hidden min-w-[450px] hover:shadow-cyan-500/10 hover:shadow-2xl transition-all duration-300">
+          <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full overflow-hidden hover:shadow-cyan-500/10 hover:shadow-2xl transition-all duration-300">
         
 
             <h2 className="text-2xl font-bold text-cyan-300 mb-6">
@@ -309,7 +309,7 @@ function MonthlyTrends() {
 
           {/* MONTHLY HIGH RISK */}
 
-          <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full overflow-hidden min-w-[450px] hover:shadow-cyan-500/10 hover:shadow-2xl transition-all duration-300">
+          <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full overflow-hidden hover:shadow-cyan-500/10 hover:shadow-2xl transition-all duration-300">
 
 
             <h2 className="text-2xl font-bold text-cyan-300 mb-6">
@@ -344,7 +344,7 @@ function MonthlyTrends() {
 
           {/* REGION COUNT */}
 
-        <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full overflow-hidden min-w-[450px] hover:shadow-cyan-500/10 hover:shadow-2xl transition-all duration-300">
+        <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full overflow-hidden hover:shadow-cyan-500/10 hover:shadow-2xl transition-all duration-300">
 
 
             <h2 className="text-2xl font-bold text-cyan-300 mb-6">
@@ -387,7 +387,7 @@ function MonthlyTrends() {
 
           {/* MONTHLY RISK LEVEL */}
 
-          <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full overflow-hidden min-w-[450px] hover:shadow-cyan-500/10 hover:shadow-2xl transition-all duration-300">
+          <div className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full overflow-hidden hover:shadow-cyan-500/10 hover:shadow-2xl transition-all duration-300">
 
 
             <h2 className="text-2xl font-bold text-cyan-300 mb-6">

@@ -170,7 +170,7 @@ useEffect(() => {
 
         <div className="mb-8" id='overview'>
 
-          <h1 className="text-5xl font-bold text-cyan-300 uppercase tracking-wide">
+          <h1 className="text-3xl md:text-5xl font-bold text-cyan-300 uppercase tracking-wide">
 
             Risk & Operations Hub
 
@@ -186,13 +186,13 @@ useEffect(() => {
 
         {/* CHART GRID */}
 
-        <div className="grid grid-cols-2 gap-8 w-full">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 w-full">
 
           {/* MONTHLY INCIDENT TRENDS */}
 
           <div
             onClick={() => navigate('/monthly-trends')}
-            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] min-w-[450px]
+            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full
             hover:scale-[1.03] hover:shadow-cyan-500/20 hover:shadow-2xl
             hover:border-cyan-300 transition-all duration-300 cursor-pointer"
           >
@@ -252,7 +252,7 @@ useEffect(() => {
 
           <div
             onClick={() => navigate('/region-analysis')}
-            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] min-w-[450px]
+            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full
             hover:scale-[1.03] hover:shadow-cyan-500/20 hover:shadow-2xl
             hover:border-cyan-300 transition-all duration-300 cursor-pointer"
           >
@@ -395,7 +395,7 @@ useEffect(() => {
 
           <div
             onClick={() => navigate('/network-performance')}
-            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] min-w-[450px]
+            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full
             hover:scale-[1.03] hover:shadow-cyan-500/20 hover:shadow-2xl
             hover:border-cyan-300 transition-all duration-300 cursor-pointer"
           >
@@ -445,7 +445,7 @@ useEffect(() => {
 
           <div
             onClick={() => navigate('/reopen-risk')}
-            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] min-w-[450px]
+            className="bg-[#0B1B2B]/95 border border-cyan-400/20 rounded-[30px] p-8 h-[420px] w-full
             hover:scale-[1.03] hover:shadow-cyan-500/20 hover:shadow-2xl
             hover:border-cyan-300 transition-all duration-300 cursor-pointer"
           >
